@@ -5,46 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pooja Sri | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f9; }
-    header { background: #333; color: #fff; padding: 20px; text-align: center; }
-    section { padding: 20px; max-width: 800px; margin: auto; }
-    h2 { color: #444; }
-    .project { margin: 15px 0; padding: 10px; border: 1px solid #ddd; background: #fff; }
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f8f9fa; color: #333; }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff; text-align: center; padding: 80px 20px;
+    }
+    header h1 { font-size: 2.8em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
+
+    /* Sections */
+    section { max-width: 1000px; margin: 40px auto; padding: 20px; }
+    h2 { text-align: center; margin-bottom: 20px; color: #444; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .skill {
+      background: #fff; padding: 10px 20px; border-radius: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-weight: bold;
+    }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project {
+      background: #fff; padding: 20px; border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s;
+    }
+    .project:hover { transform: scale(1.03); }
+    .project h3 { margin-top: 0; }
+    .project a { color: #2575fc; text-decoration: none; font-weight: bold; }
+    .project a:hover { text-decoration: underline; }
+
+    /* Resume Button */
+    .resume-btn {
+      display: block; text-align: center; margin: 20px auto;
+      padding: 12px 25px; background: #2575fc; color: white;
+      border-radius: 25px; text-decoration: none; font-size: 1.1em;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background 0.3s;
+      width: 200px;
+    }
+    .resume-btn:hover { background: #6a11cb; }
+
+    /* Contact */
+    .contact p { text-align: center; }
+    .contact a { color: #2575fc; font-weight: bold; }
+
+    /* Footer */
+    footer {
+      background: #333; color: #fff; text-align: center; padding: 15px; margin-top: 30px;
+    }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <h1>Pooja Sri</h1>
-    <p>Aspiring Data Analyst | Developer</p>
+    <p>Aspiring Data Analyst | Developer | Problem Solver</p>
   </header>
 
+  <!-- About -->
   <section>
     <h2>About Me</h2>
-    <p>Hello! I’m Pooja Sri, passionate about data analytics and software development. 
-    I enjoy working on real-world projects and learning new technologies.</p>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      I’m Pooja Sri, passionate about Data Analytics, Web Development, and solving real-world problems with technology. 
+      I enjoy building projects that combine creativity and logic. 🚀
+    </p>
   </section>
 
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Flask</div>
+      <div class="skill">React</div>
+      <div class="skill">Data Visualization</div>
+      <div class="skill">Machine Learning</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
   <section>
     <h2>Projects</h2>
-    <div class="project">
-      <h3>🎬 Movie Ticket Booking System</h3>
-      <p>A Flask + MySQL web app for booking seats, generating receipts, and viewing bookings.</p>
-      <a href="https://github.com/poojasri22/movie-booking-system">View on GitHub</a>
-    </div>
-    <div class="project">
-      <h3>📊 Excel Data Analytics Platform</h3>
-      <p>React + Node.js platform for uploading Excel files, analyzing, and visualizing data.</p>
-      <a href="https://github.com/poojasri22/excel-analytics">View on GitHub</a>
+    <div class="projects">
+      <div class="project">
+        <h3>🎬 Movie Ticket Booking System</h3>
+        <p>Flask + MySQL app for booking seats, generating receipts, and managing users.</p>
+        <a href="https://github.com/poojasri22/movie-booking-system">🔗 View Project</a>
+      </div>
+      <div class="project">
+        <h3>📊 Excel Data Analytics Platform</h3>
+        <p>React + Node.js platform for uploading Excel files, analyzing, and visualizing data.</p>
+        <a href="https://github.com/poojasri22/excel-analytics">🔗 View Project</a>
+      </div>
+      <div class="project">
+        <h3>🤖 AI Image Captioning</h3>
+        <p>Deep learning project for generating captions from images using CNN + LSTM.</p>
+        <a href="#">🔗 Coming Soon</a>
+      </div>
     </div>
   </section>
 
+  <!-- Resume -->
   <section>
+    <h2>Resume</h2>
+    <a href="resume.pdf" class="resume-btn" target="_blank">📄 View Resume</a>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:pooja@example.com">pooja@example.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/pooja-sri-j-a82b8b257">LinkedIn Profile</a></p>
     <p>GitHub: <a href="https://github.com/poojasri22">GitHub Profile</a></p>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Pooja Sri | Made with ❤️ using GitHub Pages</p>
+  </footer>
 </body>
 </html>
